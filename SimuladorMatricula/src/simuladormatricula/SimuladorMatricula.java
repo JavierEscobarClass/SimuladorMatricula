@@ -28,9 +28,9 @@ public class SimuladorMatricula {
             System.out.println("4. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer de entrada
+            scanner.nextLine(); 
 
-            // Procesar la opción seleccionada
+        
             switch (opcion) {
                 case 1:
                     matricularEstudiante("Ingeniería de Sistemas", scanner);
@@ -69,12 +69,12 @@ public class SimuladorMatricula {
     int semestre = scanner.nextInt();
     scanner.nextLine(); // Limpiar el buffer de entrada
     
-    // Verificar si el estudiante tiene materias aplazadas
+    
     System.out.print("¿El estudiante tiene materias aplazadas? (SI/NO): ");
     String tieneMateriasAplazadasStr = scanner.nextLine();
     boolean tieneMateriasAplazadas = tieneMateriasAplazadasStr.equalsIgnoreCase("SI");
     
-    // Calcular el monto de la matrícula
+   
     double montoMatricula;
     
     if (tieneMateriasAplazadas) {
@@ -117,7 +117,7 @@ public class SimuladorMatricula {
                 costoCredito = 30;
             }
             
-            montoMatricula = 1500 * semestre; // Precio base por semestre
+            montoMatricula = 1500 * semestre; 
             if (semestre >= 5) {
                 montoMatricula *= 1.05; // Aumento del 5% a partir del quinto semestre
             }
